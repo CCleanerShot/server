@@ -8,6 +8,7 @@ app.use(express.json());
 
 // Example POST endpoint
 app.post("/webhook", (req, res) => {
+console.log(req)
   console.log("Received data:", req.body);
   res.json({ status: "ok", received: req.body });
 });
