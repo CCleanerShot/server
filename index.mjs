@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Example POST endpoint
 app.post("/webhook", (req, res) => {
-  console.log("Received data:", req.body);
+  console.log("Received data:", req.body.Body);
   res.json({ status: "ok", received: req.body });
 });
 
